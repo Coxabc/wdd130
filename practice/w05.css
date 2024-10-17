@@ -1,0 +1,47 @@
+body{
+    background: lightblue;
+}
+
+#wrapper{
+    width: 75%;
+    margin: 0 auto;
+    background: lightgray;
+    padding: 30px;
+}
+
+.qbox1,.qbox2,.qbox3{
+    box-sizing: border-box;
+}
+.qbox1 {
+    margin: 20px auto;
+    border: 5px solid black; 
+    padding: 10px 30px;
+    width: 500px;
+    text-align: center;
+    border-radius: 25px;
+    font-family: "Ruge Boogie";
+    font-size: 30px;
+
+}
+
+.qbox2 {
+    margin: 20px auto;
+    border: 40px dotted lightgreen; 
+    padding: 30px 50px;
+    width: 500px;
+    background: whitesmoke;
+    text-align: center;
+    border-radius: 90px;
+    font-family: "Sixtyfour Convergence", sans-serif;
+}
+.qbox3 {
+    margin: 20px auto;
+    border: 30px double darkolivegreen; 
+    padding: 30px 80px;
+    width: 500px;
+    background: khaki;
+    text-align: center;
+    border-radius: 50px;
+    font-family: "Edu AU VIC WA NT Guides", cursive;
+    font-size: 30px;
+}
