@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Forum&family=Glass+Antiqua&display=swap');
+
 #content {
     max-width: 1600px;
     margin: 0 auto;
@@ -6,9 +8,13 @@ nav a{
     text-align: center;
     color: #e8dcce;
     text-decoration: none;
+    padding: 35px;
 }
 .home-title{
     color: #6b8b80;
+    font-family: "Glass Antiqua",'Rockwell', cursive;
+    font-size: 2em;
+    margin-top: 10px;
 }
 h4{
     color: #6b8b80;
@@ -19,11 +25,19 @@ h4{
 #hero-img {
     width: 100%;
 }
+h2{
+    margin: 0;
+
+}
 .msg h2{
     color: #6b8b80;
+    font-family: "Glass Antiqua",Georgia, cursive;
+
 }
 .msg p{
     color: #6b8b80;
+    font-size: .8em;
+    padding-bottom: 15px;
 }
 .button-box{
     text-align: center;
@@ -35,9 +49,14 @@ main section{
 #background {
     height: 725px;
     background-color: #c29e88;
+ 
 }
 body {
     background-color: white;
+    font-family: "Forum", Garamond, serif;
+    font-size: 22px;
+    margin: 0;
+    padding: 0;
 }
 header {
     background-color: #6b8b80;
@@ -50,6 +69,10 @@ nav a:hover {
     background-color:  #579aab;
     color: #e8dcce;
     text-decoration: none;
+    font-size: 18px;
+    padding: 15px 30px;
+    margin-top: 50px;
+    border-radius: 5px;
 }
 .book:hover, .join:hover {
     background-color:  #6b8b80;
@@ -57,6 +80,8 @@ nav a:hover {
 }
 .msg {
     background-color: #e8dcce;
+    line-height: 1.5em;
+    padding: 35px;
 }
 .logo{
     width: 80px;
@@ -64,10 +89,13 @@ nav a:hover {
 }
 .icon {
     width: 80px;
+    padding-top: 10px;
 }
 footer{
     background-color: #6b8b80;
     color: #e8dcce;
+    padding: 25px 50px;
+    margin-top: 200px;
 }
 footer p{
     font-size: 1.2em;
@@ -79,4 +107,19 @@ footer a{
 footer a:hover{
     color:#e8dcce;
     text-decoration: none;
+}
+footer.social img{
+    padding-top: 15px;
+}
+#logo_link{
+    padding-top: 5px;
+}
+.rivers-card, .camping-card, .rapids-card {
+    margin: 200px 0;
+} 
+.card-img{
+    border: 10px solid #c29e88;
+} 
+main section img {
+    box-sizing: border-box;
 }
