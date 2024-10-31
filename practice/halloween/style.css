@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Eater&family=Nosifer&display=swap');
+
+p, h1, h2, nav li, footer {
+    color: #242424;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+p:hover {
+    color: #caff37;
+}
+
+h1:hover {
+    color: #ffa52e;
+}
+
+h2:hover {
+    color: #a1250f;
+}
+
+nav li:hover {
+    color: #caff37;
+    background-color: #9e1fff;
+}
+
+footer:hover {
+    color: #a1250f;
+}
+
+body {
+    background-color: #242424;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 4em;
+    font-size: 18px;
+    text-align: center;
+    cursor: url("flashlight3.jpeg"), auto !important;
+}
+
+nav {
+    background-color: #242424;
+    line-height: 3em;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    font-family: 'Eater', serif;
+    font-weight: 400;
+}
+
+nav li {
+    padding: 1em;
+    min-width: 120px;
+    text-decoration: none;
+}
+
+footer {
+    font-family: "Nosifer", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+img {
+    filter: grayscale(100%);
+    transition: filter 0.3s;
+}
+
+img:hover {
+    filter: none;
+}
