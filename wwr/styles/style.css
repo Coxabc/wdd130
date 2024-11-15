@@ -4,6 +4,10 @@
     max-width: 1600px;
     margin: 0 auto;
 }
+#contact{
+    max-width: 1600px;
+    margin: 0 auto; 
+}
 nav a{
     text-align: center;
     color: #e8dcce;
