@@ -1,56 +1,297 @@
-/* styles.css */
+
+/* Font Face Declarations */
+@font-face {
+  font-family: 'luna';
+  src: url('luna/Luna.ttf');
+}
+@font-face {
+  font-family: 'nourd';
+  src: url('Nourd-Font/nourd_regular.ttf');
+}
+@font-face {
+  font-family: 'genty';
+  src: url('genty/GentyDemo-Regular.ttf');
+}
+
+/* Root Variables for Consistent Styling */
+:root {
+  --paragraph-font: 'nourd', Arial, sans-serif;
+  --headline-font: 'luna', Georgia, serif;
+  --small-heading-font: 'genty', Helvetica, sans-serif;
+  --nav-background-color: #ffa141;
+  --nav-link-color: #e8dcce;
+  --nav-hover-link-color: #fff;
+  --nav-hover-background-color: #579aab;
+  --paragraph-background-color: #6b8b80;
+  --headline-color-on-color: #e8dcce;
+  --headline-color-on-white: #333;
+  --accent1-color: #579aab;
+  --background-color: #ADC8DB;
+}
+
+/* General Body Styling */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f3f3f3;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
+  font-family: var(--paragraph-font);
+  background-color: var(--background-color);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 1600px;
+}
+
+/* Header Styling */
+header {
+  background-color: var(--nav-background-color);
+  display: grid;
+  grid-template-columns: 150px auto;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Navigation Styling */
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background-color: var(--nav-background-color);
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 20px;
+}
+
+nav li {
+  position: relative;
+}
+
+nav a {
+  color: var(--nav-link-color);
+  text-decoration: none;
+  font-family: var(--small-heading-font);
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 25px;
+}
+
+nav a:hover {
+  color: var(--nav-hover-link-color);
+  background-color: var(--nav-hover-background-color);
+}
+
+nav li ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--nav-background-color);
+  padding: 10px 0;
+  list-style: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+nav li:hover ul {
+  display: block;
+}
+
+nav li ul li {
+  width: 200px;
+}
+
+nav li ul li a {
+  display: block;
+  padding: 10px;
+  color: var(--nav-link-color);
+  text-decoration: none;
+}
+
+nav li ul li a:hover {
+  background-color: var(--nav-hover-background-color);
+  color: var(--nav-hover-link-color);
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background-color: #ffa141;
+  color: var(--nav-link-color);
+  padding: 10px 15px;
+  font-size: 25px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-family: var(--small-heading-font);
   
-  .gallery {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
+}
+
+.dropbtn i {
+  margin-left: 5px;
+}
+
+.dropbtn:hover {
+  background-color: #e68a00;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--background-color);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  z-index: 1000;
+}
+
+.dropdown-content a {
+  color: #FF6EA7;
+  padding: 10px 15px;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+  background-color: #579aab;
+}
+
+/* Show Dropdown on Hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Logo Styling */
+#logo {
+  width: 100px;
+  height: 100px;
+}
+
+/* Gallery Styling */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.polaroid {
+  position: relative;
+  background: #fff;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border: 1px solid #ddd;
+  text-align: center;
+  transition: transform 0.3s ease;
+  font-family: 'luna';
+  font-size: 10px;
+  color: #34586E;
+  text-decoration: none;
+}
+
+.polaroid:hover {
+  transform: translateY(-10px);
+}
+
+.polaroid img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.caption {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 5px;
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  font-family: 'nourd';
+ 
+}
+.caption a{
+  text-decoration: none;
+}
+
+.polaroid:hover .caption {
+  opacity: 1;
+}
+
+/* Footer Styling */
+footer {
+  background-color: var(--nav-background-color);
+  color: var(--headline-color-on-color);
+  padding: 25px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  font-family: var(--paragraph-font);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+footer p {
+  font-size: 10px;
+  margin: 0;
+  font-family: 'luna';
+}
+
+footer a {
+  color: var(--headline-color-on-color);
+  text-decoration: none;
+  font-size: 20px;
+  padding: 5px 10px;
+}
+
+footer a:hover {
+  background-color: var(--accent1-color);
+  color: var(--headline-color-on-white);
+}
+
+footer .social-icons {
+  display: flex;
+  gap: 10px;
+}
+
+footer .social-icons img {
+  width: 30px;
+  height: 30px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
   }
-  
-  .polaroid {
-    position: relative;
-    width: 200px;
-    background: #fff;
-    padding: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border: 1px solid #ddd;
+
+  footer {
+    flex-direction: column;
     text-align: center;
-    transition: transform 0.3s ease;
   }
-  
-  .polaroid:hover {
-    transform: translateY(-10px);
+
+  footer .social-icons {
+    justify-content: center;
+    margin-top: 10px;
   }
-  
-  .polaroid img {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-  
-  .caption {
-    position: absolute;
-    bottom: 10px;
-    left: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.7);
-    color: #fff;
-    padding: 5px;
-    font-size: 14px;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-  }
-  
-  .polaroid:hover .caption {
-    opacity: 1;
-  }
-  
+}
+
